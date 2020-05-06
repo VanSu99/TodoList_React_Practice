@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.btn-modal {
+    outline: none;
+    margin: 20px 0;
+    background: lightseagreen;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.btn-save {
+    outline: none;
+    background: #d2d2d2;
+    color: #333;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+.btn-close {
+    outline: none;
+    background: #e93b3b;
+    color: #fff;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+.modal-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    z-index: 999;
+    display: none;
+}
+.modal-wrapper.show {
+    display: block;
+}
+.overlay {
+    background-color: rgba(0, 0, 0, 0.45);
+    z-index: 9;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.modal-dialog {
+    position: relative;
+}
+.modal-content {
+    z-index: 10;
+    /* min-width: 500px; */
+    max-height: 1200px;
+    background: #fff;
+    position: absolute;
+    transform: translateX(-50%) scale(1.2);
+    top: 50px;
+    left: 50%;
+    padding: 10px 20px;
+    box-shadow: 5px 6px 5px  rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
+    opacity: 0;
+    transition: transform 0.3s ease-in;
+}
+.modal-active .modal-content {
+    opacity: 1;
+    transform: translateX(-50%) scale(1);
+}
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 22px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #d2d2d2;
+}
+.btn-exit {
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.modal-body {
+    padding: 15px 0;
+}
+.modal-footer {
+    border-top: 1px solid #d2d2d2;
+    text-align: right;
+    padding-top: 10px;
+}
+body.modal-active {
+    overflow: hidden;
+}

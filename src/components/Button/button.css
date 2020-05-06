@@ -1,0 +1,15 @@
+button {
+    position: relative;
+}
+button span {
+    transition: opacity .3s ease;
+    -webkit-transition: opacity .3s ease;
+}
+button .loading {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+button .loading + span {
+    opacity: 0;
+}

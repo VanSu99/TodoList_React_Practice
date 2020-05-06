@@ -1,0 +1,12 @@
+.sort-desc {
+    display: flex;
+    align-items: center;
+    background: #50DE1F;
+    border-radius: 3px;
+    padding: 0 10px;
+    color: #fff;
+}
+.sort-desc span {
+    text-transform: uppercase;
+    font-weight: bold;
+}
